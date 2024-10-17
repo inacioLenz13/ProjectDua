@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <section class="signin">
-        <div class="content">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <div class="form">
-                    <div class="imputBox">
-                        <input type="text" id="username" required>
-                        <i>Usuário</i>
-                    </div>
-                    <div class="imputBox">
-                        <input type="password" id="password" required>
-                        <i>Senha</i>
-                    </div>
-                    <button type="submit">Entrar</button>
+    <div class="wrapper">
+        <!-- Ação do formulário deveria apontar para o backend -->
+        <form action="/login" method="POST">
+            <h1>Login</h1>
+
+            <!-- Campo para email -->
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
                 </div>
-                <div id="message"></div>
-            </form>
-        </div>
-    </section>
-    <script src="login.js"></script>
+            </div>
+
+            <!-- Campo para senha -->
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password" name="password" placeholder="Senha" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+            </div>
+
+            <!-- Botão de envio do formulário -->
+            <button type="submit" class="btn">Registrar</button>
+        </form>
+    </div>
 </body>
 </html>
